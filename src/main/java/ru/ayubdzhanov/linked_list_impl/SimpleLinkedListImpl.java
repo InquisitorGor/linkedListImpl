@@ -67,6 +67,18 @@ public class SimpleLinkedListImpl implements LinkedList {
         return size;
     }
 
+    @Override
+    public int get(int index) {
+        Node currentNode = firstElement;
+        int listIndex = 0;
+        while (currentNode != null) {
+            if (listIndex == index) return currentNode.getData();
+            currentNode = currentNode.getNextElement();
+            listIndex++;
+        }
+        return -1;
+    }
+
     public Node getFirstElement() {
         return firstElement;
     }

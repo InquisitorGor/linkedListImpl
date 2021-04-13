@@ -14,4 +14,6 @@ public interface LinkedList {
     int getSize();
 
     void display();
+
+    int get(int index);
 }
